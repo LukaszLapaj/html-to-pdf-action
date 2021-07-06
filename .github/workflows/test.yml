@@ -20,6 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
+          ref: ${{ github.ref }}
           fetch-depth: 1
 
       - name: html to pdf
