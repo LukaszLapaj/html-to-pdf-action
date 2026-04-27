@@ -16,7 +16,9 @@ RUN  apt-get update \
 
 LABEL MAINTAINER="Łukasz Łapaj <lukaszlapaj@interia.pl>"
 
-ENTRYPOINT ["node", "/lib/main.js"]
+WORKDIR /app
+
+ENTRYPOINT ["node", "/app/lib/main.js"]
 
 COPY . .
 
